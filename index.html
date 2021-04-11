@@ -17,15 +17,15 @@
   </p>
   <em id="disclaimer">If you don't identify as either Male or Female, We apologize for not having more options.</em>
   <div class="form">
-    <form action="date">
+    <form action="date" id="birthday">
       <label for="day">Date
-        <input type="number" id="day" name="day" placeholder="DD">
+        <input type="number" id="day" name="day" placeholder="DD" required>
       </label>
       <label for="Month">Month
-        <input type="number" id="month" name="month" placeholder="MM">
+        <input type="number" id="month" name="month" placeholder="MM" required>
       </label>
       <label for="year">Year
-        <input type="number" id="year" name="year" placeholder="YYYY">
+        <input type="number" id="year" name="year" placeholder="YYYY" required>
       </label>
     </form>
     <label for="gender">Female
@@ -34,13 +34,14 @@
     <label for="gender">Male
       <input type="radio" name="gender" id="male" value="male">
     </label>
-    <button type="submit">SUBMIT</button>
+    <button type="submit" onclick="submitForm()">SUBMIT</button>
+    <button type="reset" onclick="resetForm()">RESET</button>
   </div>
   <div id="dayOfBirth">
 
   </div>
   <div id="akanName">
-    
+
   </div>
   
   <script src="js/script.js"></script>
