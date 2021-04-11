@@ -8,27 +8,35 @@ let gender=(prompt('Enter Gender')).toLowerCase();
 function dayOfTheWeek(century, year, month, date){
   return (( ( (century/4) -(2*century-1)) + ((5*(year/4)) ) + ((26*(month+1)/10)) + date )%7)
   //( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + date ) %7
-}
-//fuction for submitting
-function submitForm(){
-  document.getElementById('birthday').submit();
-}
-//function for reseting the form
-function resetForm(){
-  document.getElementById('birthday').reset();
-}
+};
 let dayNumber=(dayOfTheWeek(century, year, month, date).toFixed());
 
 let dOW=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 let akanNamesMales=['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
 let akanNamesFemales=['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
-alert(`You were born on ${dOW[dayNumber]}`);
+    bornDay=(`You were born on ${dOW[dayNumber]}`);
     if(gender=='male'|| gender=='Male'){
-      alert(`Your Akan Name is ${akanNamesMales[dayNumber]}`);
+      akanName=(`Your Akan Name is ${akanNamesMales[dayNumber]}`);
     }else if(gender=='female'||gender=='Female'){
-      alert(`Your Akan Name is ${akanNamesFemales[dayNumber]}`);
+      akanName=(`Your Akan Name is ${akanNamesFemales[dayNumber]}`);
     }else if(gender==''){
-      alert('Please select your Gender')
+      akanName=('Please select your Gender')
     }else {
-      alert('Please Enter Either Male of Female')
+      akanName=('Please Enter Either Male of Female')
     };
+  alert(bornDay)
+  alert(akanName);
+
+//fuction for submitting
+function submitForm(){
+  /*document.getElementById('birthday').submit();*/
+}
+//function to print Akan name and day a user was born
+function printNameAndDay(){
+  document.getElementById('dayOfBirth').innerHTML= bornDay;
+  document.getElementById('akanName').innerHTML= akanName;
+}
+//function for reseting the form
+function resetForm(){
+  document.getElementById('birthday').reset();
+}
