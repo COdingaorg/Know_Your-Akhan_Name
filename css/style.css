@@ -9,6 +9,16 @@
   font-family: 'Open Sans', sans-serif;
   font-family: 'Open Sans', sans-serif;
 }
+h1, h2, h3, h4, #disclaimer, input, label{
+  margin: 1%;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.2em;
+}
+#disclaimer{
+  margin-top: 2%;
+  font-style: oblique;
+  font-size: .9em;
+}
 body{
   height: 100vh;
   width: 100%;
@@ -16,17 +26,37 @@ body{
   background-size: contain;
   color: white;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-#intro, .form, #display{
-  width: 70%;
-  background-color: white;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+#overlay{
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom, rgba(158, 27, 27, 0.1), rgba(255, 255, 255, 0.8));
+  width: 80%;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+.form, #display{
+  width: 100%;
   color: black;
-  padding:1% 4%;
+  padding:2% 4%;
   border-radius: 20px;
   text-align: center;
-  margin-bottom: 1%;
+}
+#intro{
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  color: black;
+  padding:2% 4%;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+}
+#display{
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 0px 0px 20px 20px;
+}
+.form{
+  margin: 2%;
+  font-size: 1.2rem;
 }

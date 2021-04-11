@@ -8,43 +8,45 @@
   <title>Know your Akan Name</title>
 </head>
 <body>
-<div id="intro">
-  <h2>Know your Akan name</h2>
-  <h3>____Find out the day you were born____</h3>
-  <p id="description">Hello and Welcome. Lets have some fun shall we. This websites shows you the day of the week you were born and
-    you Akan name. Akan name are cultural names given to children depending on your gender and day of the week you were born.
-    You will be required to enter your birthday date in the correct format and select your Gender. We will then show you the day of the 
-    week and your Akan name :). Awesome right?!
-  </p>
-  <em id="disclaimer">If you don't identify as either Male or Female, We apologize for not having more options.</em>
-  </div>
-  <div class="form">
-    <form id="birthday">
-      <label for="day">Date
-        <input type="number" id="day" name="day" placeholder="DD" required>
-      </label>
-      <label for="Month">Month
-        <input type="number" id="month" name="month" placeholder="MM" required>
-      </label>
-      <label for="year">Year
-        <input type="number" id="year" name="year" placeholder="YYYY" required>
-      </label>
-    </form>
-    <label for="gender">Female
-      <input type="radio" id="gender" name="gender" value="female">
-    </label>
-    <label for="gender">Male
-      <input type="radio" name="gender" id="gender" value="male">
-    </label>
-    <button type="submit" onclick="printNameAndDay(); submitForm()">SUBMIT</button>
-    <button type="reset" onclick="resetForm()">RESET</button>
-  </div>
-  <div id="display">
-    <div id="dayOfBirth">
-
+<div id="overlay">
+  <div id="intro">
+    <h2>Know your Akan name</h2>
+    <h3>__Find out the day you were born__</h3>
+    <p id="description">Hello and Welcome. Lets have some fun shall we. This websites shows you the day of the week you were born and
+      you Akan name. Akan name are cultural names given to children depending on your gender and day of the week you were born.
+      You will be required to enter your birthday date in the correct format and select your Gender. We will then show you the day of the 
+      week and your Akan name :). Awesome right?!
+    </p>
+    <p id="disclaimer">Disclaimer: If you don't identify as either Male or Female, We apologize for not having more options.</p>
     </div>
-    <div id="akanName">
+    <div class="form">
+      <form id="birthday">
+        <label for="day">Date
+          <input type="number" id="day" name="day" placeholder="DD" required>
+        </label>
+        <label for="Month">Month
+          <input type="number" id="month" name="month" placeholder="MM" required>
+        </label>
+        <label for="year">Year
+          <input type="number" id="year" name="year" placeholder="YYYY" required>
+        </label>
+      </form>
+      <label for="gender">Female
+        <input type="radio" id="gender" name="gender" value="female">
+      </label>
+      <label for="gender">Male
+        <input type="radio" name="gender" id="gender" value="male">
+      </label>
+      <button type="submit" onclick="printNameAndDay(); submitForm()">SUBMIT</button>
+      <button type="reset" onclick="resetForm()">RESET</button>
+    </div>
+    <div id="display">
+      <div id="dayOfBirth">Day you were born:
 
+      </div>
+      <div id="akanName">Akan Name:
+
+      </div>
     </div>
   </div>
   <!--<script src="js/script.js"></script>-->
