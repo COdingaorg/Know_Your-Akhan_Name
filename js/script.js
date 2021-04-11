@@ -11,3 +11,6 @@ function dayOfTheWeek(century, year, month, date){
 }
 let dayNumber=(dayOfTheWeek(century, year, month, date).toFixed());
 
+let dOW=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+let akanNamesMales=['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
+let akanNamesFemales=['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
