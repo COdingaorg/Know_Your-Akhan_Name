@@ -24,8 +24,15 @@ let akanNamesFemales=['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama']
     }else {
       akanName=('Please Enter Either Male of Female')
     };
-  alert(bornDay)
-  alert(akanName);
+//changing the alerts below to submit button
+//  alert(bornDay)
+//  alert(akanName);
+let confirmation = confirm('Results are ready, click ok to proceed');
+if(confirmation==true){
+  printNameAndDay()
+}else if(confirmation==false){
+  alert('You cancelled')
+};
 
 //fuction for submitting
 function submitForm(){
