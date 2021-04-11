@@ -9,3 +9,5 @@ function dayOfTheWeek(century, year, month, date){
   return (( ( (century/4) -(2*century-1)) + ((5*(year/4)) ) + ((26*(month+1)/10)) + date )%7)
   //( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + date ) %7
 }
+let dayNumber=(dayOfTheWeek(century, year, month, date).toFixed());
+
