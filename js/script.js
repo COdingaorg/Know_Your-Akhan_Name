@@ -4,7 +4,7 @@ let date=parseInt(prompt('Enter date of birth', 'Day only (DD)'));
   };
 let month=parseInt(prompt('Refresh and Enter month of birth', 'MM'));
   if(month==0||month>12){
-    alert('Enter a valid month')
+    alert('Refresh and Enter a valid month')
   };
 let yearFull=prompt('Enter year of birth', 'YYYY');
   let century=parseInt((yearFull.charAt(0))+(yearFull.charAt(1)));
