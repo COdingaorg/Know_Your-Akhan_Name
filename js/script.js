@@ -13,15 +13,16 @@ function dayOfTheWeek(century, year, month, date){
 //fuction for submitting
 function submitForm(){
   document.getElementById('birthday').submit();
-      alert(`You were born on ${dOW[dayNumber]}`);
+      let bornDay=(`You were born on ${dOW[dayNumber]}`);
+      let akanNames;
       if(gender=='male'|| gender=='Male'){
-        alert(`Your Akan Name is ${akanNamesMales[dayNumber]}`);
+        akanNames=(`Your Akan Name is ${akanNamesMales[dayNumber]}`);
       }else if(gender=='female'||gender=='Female'){
-        alert(`Your Akan Name is ${akanNamesFemales[dayNumber]}`);
+        akanNames=(`Your Akan Name is ${akanNamesFemales[dayNumber]}`);
       }else if(gender==''){
-        alert('Please select your Gender')
+        akanNames=('Please select your Gender')
       }else {
-        alert('Please Enter Either Male of Female')
+        akanNames=('Please Enter Either Male of Female')
       };
   document.getElementById('dayOfBirth').innerHTML=bornDay;
 
