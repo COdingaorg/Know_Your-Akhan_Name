@@ -14,3 +14,13 @@ let dayNumber=(dayOfTheWeek(century, year, month, date).toFixed());
 let dOW=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 let akanNamesMales=['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
 let akanNamesFemales=['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
+alert(`You were born on ${dOW[dayNumber]}`);
+    if(gender=='male'|| gender=='Male'){
+      alert(`Your Akan Name is ${akanNamesMales[dayNumber]}`);
+    }else if(gender=='female'||gender=='Female'){
+      alert(`Your Akan Name is ${akanNamesFemales[dayNumber]}`);
+    }else if(gender==''){
+      alert('Please select your Gender')
+    }else {
+      alert('Please Enter Either Male of Female')
+    };
