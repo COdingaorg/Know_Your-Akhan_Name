@@ -62,14 +62,25 @@ $(document).ready(function(){
   var dayNumber=Math.round(( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day ) %7);
     var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
       if (dayNumber>=0||dayNumber<=7){
-        bornDay = days[dayNumber];
-        console.log(dayNumber)
+        var validDayNumber = dayNumber
+        bornDay = days[validDayNumber];
+        console.log(validDayNumber)
         console.log(bornDay)
       }else{
         alert('Please enter a Valid date')
       }
 
-  
+      let akanNamesMales=['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
+      let akanNamesFemales=['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
+        if (gender=='male') {
+          var userAkanName = akanNamesMales[validDayNumber]
+        }else if(gender=='female'){
+          var userAkanName = akanNamesFemales[validDayNumber]
+        }else if(gender=='other'){
+          alert('sorry, we dont have Name results for the Gender option selected')
+        }else{
+          alert('Please select a gender option to proceed')
+        };
   
 
     event.preventDefault();
