@@ -8,6 +8,7 @@
   <title>Know your Akan Name</title>
 </head>
 <body>
+<div class="container">
   <nav><a href="mailto:calemasanga@gmail.com"><button>Lets Talk</button></a><p>This button opens your Email</p></nav>  
 <div id="overlay">
   <div id="intro">
@@ -24,22 +25,21 @@
     </div>
     <div class="form">
       <form id="birthday">
-        <label for="day">Date
-          <input type="number" id="day" name="day" placeholder="DD" maxlength="2" required>
-        </label>
-        <label for="Month">Month
-          <input type="number" id="month" name="month" placeholder="MM" maxlength="2" required>
-        </label>
-        <label for="year">Year
-          <input type="number" id="year" name="year" placeholder="YYYY" maxlength="4" required>
+        <label for="day">Enter Your Date of Birth
+          <input type="date" id="day" name="day" required>
         </label>
       </form>
-      <label for="gender">Female
-        <input type="radio" id="gender" name="gender" value="female">
-      </label>
-      <label for="gender">Male
-        <input type="radio" name="gender" id="gender" value="male">
-      </label>
+      <form>
+        <label for="gender">Female
+          <input type="radio" id="gender" name="gender" value="female">
+        </label>
+        <label for="gender">Male
+          <input type="radio" name="gender" id="gender" value="male">
+        </label>
+        <label for="gender">other
+          <input type="radio" name="gender" id="gender" value="other">
+        </label>
+      </form>
       <button type="submit" onclick="printNameAndDay(); submitForm()">SUBMIT</button>
       <button type="reset" onclick="resetForm()">RESET</button>
     </div>
@@ -51,6 +51,7 @@
 
       </h2>
     </div>
+  </div>
   </div>
   <p>&copy;copyright 2021 Caleb Odinga</p>
   <script src="js/script.js"></script>
