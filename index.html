@@ -24,13 +24,12 @@
     </p>
     <p id="disclaimer">Disclaimer: If you don't identify as either Male or Female, We apologize for not having more options.</p>
     </div>
-    <div class="form">
+    <div id="form" class="form" >
       <form id="birthday">
         <label for="day">Enter Your Date of Birth
           <input type="date" id="day" name="day" required>
         </label>
-      </form>
-      <form>
+        Select Gender
         <label for="gender">Female
           <input type="radio" id="gender" name="gender" value="female">
         </label>
@@ -41,8 +40,8 @@
           <input type="radio" name="gender" id="gender" value="other">
         </label>
       </form>
-      <button type="submit" onclick="printNameAndDay(); submitForm()">SUBMIT</button>
-      <button type="reset" onclick="resetForm()">RESET</button>
+      <button type="submit" id="submit" name="submit">SUBMIT</button><!--onclick="printNameAndDay();-->
+      <button type="reset" onclick="resetForm()">RESET</button> 
     </div>
     <div id="display">
       <h2 id="dayOfBirth">Day you were born:

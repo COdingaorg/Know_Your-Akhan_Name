@@ -44,6 +44,37 @@
   function submitForm(){
     /*document.getElementById('birthday').submit();
   }*/
+$(document).ready(function(){
+  $('#submit').click(function(event){
+    //alert('success');
+    $('form').css('background-color', 'green');
+    var date = ($('#day').val());
+    console.log(date)
+    var day = parseInt((date.charAt(8))+(date.charAt(9)))
+    var month = parseInt((date.charAt(5))+(date.charAt(6)))
+    var year = parseInt((date.charAt(2))+(date.charAt(3)))
+    var century = parseInt((date.charAt(0))+(date.charAt(1)))
+    var gender = $('input:radio[name=gender]:checked').val();
+    console.log(gender)
+
+    event.preventDefault();
+  })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   //function to print Akan name and day a user was born
   function printNameAndDay(){
     document.getElementById('dayOfBirth').innerHTML= bornDay;
