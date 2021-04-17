@@ -52,7 +52,6 @@ $(document).ready(function(){
     //alert('success');
     $('form').css('background-color', 'green');
     var date = ($('#day').val());
-    console.log(date)
     var day = parseInt((date.charAt(8))+(date.charAt(9)))
     var month = parseInt((date.charAt(5))+(date.charAt(6)))
     var year = parseInt((date.charAt(2))+(date.charAt(3)))
@@ -64,8 +63,6 @@ $(document).ready(function(){
       if (dayNumber>=0||dayNumber<=7){
         var validDayNumber = dayNumber
         bornDay = days[validDayNumber];
-        console.log(validDayNumber)
-        console.log(bornDay)
       }else{
         alert('Please enter a Valid date')
       }
@@ -81,29 +78,21 @@ $(document).ready(function(){
         }else{
           alert('Please select a gender option to proceed')
         };
-        $('#dayOfBirth').after('<p>'+bornDay+'</p>');
-        $('#akanName').after('<p>'+userAkanName+'</p>');
+        if(gender==null||gender==''){
+          $('#akanName p').before('<p>You did not select any gender option</p>');
+        };
+        if(date==null||date==''){
+          $('#dayOfBirth p').before('<p>You did not enter any date</p>');
+        }
+        $('#dayOfBirth p').before('<p>'+bornDay+'</p>');
+        $('#akanName p').before('<p>'+userAkanName+'</p>');
   
-  
-
     event.preventDefault();
+    //deleting the first child
+    $('#dayOfBirth p:last-child').remove();
+    $('#akanName p:last-child').remove();
   })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   //function to print Akan name and day a user was born
   function printNameAndDay(){
     document.getElementById('dayOfBirth').innerHTML= bornDay;
@@ -112,4 +101,4 @@ $(document).ready(function(){
   //function for reseting the form
   function resetForm(){
     document.getElementById('birthday').reset();
-  }
+  };

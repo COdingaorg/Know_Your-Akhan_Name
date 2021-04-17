@@ -89,3 +89,7 @@ img{
   width: 20%;
   border: 5px solid rgba(106, 90, 205, 0.4);
 }
+p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+}
