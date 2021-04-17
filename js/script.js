@@ -44,6 +44,9 @@
   function submitForm(){
     /*document.getElementById('birthday').submit();
   }*/
+  var bornDay
+  //user Logic
+  //getting inputs from user
 $(document).ready(function(){
   $('#submit').click(function(event){
     //alert('success');
@@ -55,7 +58,19 @@ $(document).ready(function(){
     var year = parseInt((date.charAt(2))+(date.charAt(3)))
     var century = parseInt((date.charAt(0))+(date.charAt(1)))
     var gender = $('input:radio[name=gender]:checked').val();
-    console.log(gender)
+  //formula to calculate day Number  
+  var dayNumber=Math.round(( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day ) %7);
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+      if (dayNumber>=0||dayNumber<=7){
+        bornDay = days[dayNumber];
+        console.log(dayNumber)
+        console.log(bornDay)
+      }else{
+        alert('Please enter a Valid date')
+      }
+
+  
+  
 
     event.preventDefault();
   })
