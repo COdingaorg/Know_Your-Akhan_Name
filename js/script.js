@@ -80,6 +80,8 @@ $(document).ready(function(){
         };
         if(gender==null||gender==''){
           $('#akanName p').before('<p>You did not select any gender option</p>');
+        }else if(gender=='other'){
+          $('#akanName p').before('<p>Sorry we dont have Name results for the selected option</p>');
         };
         if(date==null||date==''){
           $('#dayOfBirth p').before('<p>You did not enter any date</p>');
