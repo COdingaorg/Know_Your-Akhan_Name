@@ -81,6 +81,9 @@ $(document).ready(function(){
         }else{
           alert('Please select a gender option to proceed')
         };
+        $('#dayOfBirth').after('<p>'+bornDay+'</p>');
+        $('#akanName').after('<p>'+userAkanName+'</p>');
+  
   
 
     event.preventDefault();
