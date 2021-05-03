@@ -23,11 +23,11 @@ $(document).ready(function () {
     } else if (gender == null || gender == ''||gender == undefined) {
       $('#akanName').append('<p>You did not select any gender option</p>');
     };
-    //Printing day of borth and Akan Name
-    $('#dayOfBirth').append('<p>' + bornDay + '</p>');
-    $('#akanName').append('<p>' + userAkanName + '</p>');
     //deleting the first child
     $('#dayOfBirth p').first().remove();
     $('#akanName p').first().remove();
+    //Printing day of borth and Akan Name
+    $('#dayOfBirth').append('<p>' + bornDay + '</p>');
+    $('#akanName').append('<p>' + userAkanName + '</p>');
   })
 })
