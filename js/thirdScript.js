@@ -19,15 +19,15 @@ $(document).ready(function () {
     } else if (gender == 'female') {
       var userAkanName = akanNamesFemales[bornDayNumber]
     } else if (gender == 'other') {
-      $('#akanName p').before('<p>Sorry we dont have Name results for the selected option</p>');
+      $('#akanName').append('<p>Sorry we dont have Name results for the selected option</p>');
     } else if (gender == null || gender == ''||gender == undefined) {
-      $('#akanName p').before('<p>You did not select any gender option</p>');
+      $('#akanName').append('<p>You did not select any gender option</p>');
     };
     //Printing day of borth and Akan Name
-    $('#dayOfBirth p').before('<p>' + bornDay + '</p>');
-    $('#akanName p').before('<p>' + userAkanName + '</p>');
+    $('#dayOfBirth').append('<p>' + bornDay + '</p>');
+    $('#akanName').append('<p>' + userAkanName + '</p>');
     //deleting the first child
-    $('#dayOfBirth p:last-child').remove();
-    $('#akanName p:last-child').remove();
+    $('#dayOfBirth p').first().remove();
+    $('#akanName p').first().remove();
   })
 })
